@@ -11,7 +11,7 @@ root.title("Invoice App")
 
 
 #Image Properties
-invoiceImage = Image.open('/Users/david-ton-lai/PycharmProjects/CP_Python_OOP/Images/invoice.jpg')
+invoiceImage = Image.open('invoice.jpg')
 invoiceImage.thumbnail((100,160), Image.ANTIALIAS)
 tkInvoiceImage = ImageTk.PhotoImage(invoiceImage)
 labelImage = tk.Label(image=tkInvoiceImage)
