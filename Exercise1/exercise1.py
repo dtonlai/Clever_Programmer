@@ -8,7 +8,13 @@ root.title("Invoice App")
 #Class
 
 #Functions
-
+def retrieveField():
+    subjectEntered = subjectEntry.get()
+    hourEntered = hourEntry.get()
+    amountEntered = amountEntry.get()
+    subjectEntry.delete(0, 'end')
+    hourEntry.delete(0, 'end')
+    amountEntry.delete(0, 'end')
 
 #Image Properties
 invoiceImage = Image.open('invoice.jpg')
@@ -54,7 +60,7 @@ paidNoRadio.grid(column=2, row=3)
 notesLabel = tk.Label(root, text="Notes")
 notesLabel.grid(column=0, row=4, sticky=tk.W)
 
-submitButton = tk.Button(root, text="Submit")
+submitButton = tk.Button(root, text="Submit", command=retrieveField)
 submitButton.grid(column=1, row=6, columnspan=2)
 
 
